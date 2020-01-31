@@ -125,12 +125,12 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         if (FingerprintAuth.mDisableBackup) {
             mSecondDialogButton.setVisibility(View.GONE);
         }
-        mSecondDialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToBackup();
-            }
-        });
+//        mSecondDialogButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                goToBackup();
+//            }
+//        });
         int fingerprint_container_id = getResources()
                 .getIdentifier("fingerprint_container", "id", FingerprintAuth.packageName);
         mFingerprintContent = v.findViewById(fingerprint_container_id);
@@ -200,7 +200,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 mCancelButton.setText(cancel_id);
                 int use_backup_id = getResources()
                         .getIdentifier("use_backup", "string", FingerprintAuth.packageName);
-                mSecondDialogButton.setText(use_backup_id);
+                // mSecondDialogButton.setText(use_backup_id);
                 mFingerprintContent.setVisibility(View.VISIBLE);
                 break;
             case NEW_FINGERPRINT_ENROLLED:
