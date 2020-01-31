@@ -109,7 +109,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         }
 
         int cancel_button_id = getResources()
-                .getIdentifier("cancel_button", "id", FingerprintAuth.packageName);
+                .getIdentifier("second_dialog_button", "id", FingerprintAuth.packageName);
         mCancelButton = (Button) v.findViewById(cancel_button_id);
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,9 +197,9 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 .getIdentifier("cancel", "string", FingerprintAuth.packageName);
         switch (mStage) {
             case FINGERPRINT:
-                mCancelButton.setText(cancel_id);
                 int use_backup_id = getResources()
                         .getIdentifier("use_backup", "string", FingerprintAuth.packageName);
+                mCancelButton.setText(use_backup_id);
                 // mSecondDialogButton.setText(use_backup_id);
                 mFingerprintContent.setVisibility(View.VISIBLE);
                 break;
